@@ -34,8 +34,8 @@ namespace treinamento_poo.Service
 
             //Frase
             Console.WriteLine();
-            Console.WriteLine($"O {contaCorrente.Titular} " + $"fez o saque de: { valorConvertido} " + "\n" + 
-                $"pois, o seu saldo agora é de: {saque} reais.");
+            Console.WriteLine($"O {contaCorrente.Titular} " + $"fez o saque de: R$ { valorConvertido} reais," + "\n" + 
+                $"o seu saldo agora é de: R$ {saque} reais.");
 
             Console.ReadKey();
         }
@@ -99,8 +99,8 @@ namespace treinamento_poo.Service
             var transferencia = Transferir(valorConvertido, contaCorrente.Saldo, contaDestino);
 
             //Tirando a prova real.
-            //Console.WriteLine();
-            //Console.WriteLine($"Conforme feito o deposito, agora (ela/ele): {contaDestino.Titular} está com o saldo de: R$ {contaDestino.Saldo} reais.");
+            Console.WriteLine();
+            Console.WriteLine($"Conforme feito o deposito, agora (ela/ele): {contaDestino.Titular} está com o saldo de: R$ {contaDestino.Saldo} reais.");
 
             Console.ReadKey();
         }
@@ -144,9 +144,8 @@ namespace treinamento_poo.Service
                 //Enfiim a conta destino receberá o valor digitado
                 contaDestino.Saldo += valor;
                 Console.WriteLine($"Transferencia realizada com sucesso!. O seu saldo agora é de: R$ {saldo} reais.");
-
-
             }
+
             return true;
         }
 
